@@ -5,7 +5,8 @@ import "react-responsive-carousel/lib/styles/carousel.min.css"; // requires a lo
 
 export default function Banner() {
   return (
-    <section className="bg-[#232F3E] bg-opacity-90 ">
+    <section className="relative mx-auto max-w-screen-xl">
+      <div className="absolute bottom-0 z-20 h-40 w-full bg-gradient-to-t from-gray-100 to-transparent"></div>
       <Carousel
         infiniteLoop
         showStatus={false}
@@ -13,7 +14,7 @@ export default function Banner() {
         showThumbs={false}
         interval={5000}
       >
-        <div className="">
+        <div>
           <Image
             src="/Banner1.jpeg"
             width={1400}
@@ -23,7 +24,7 @@ export default function Banner() {
             priority
           />
         </div>
-        <div className="h-[20vh] md:h-[40vh] lg:h-[60vh]">
+        <div>
           <Image
             src="/Banner2.jpg"
             width={1400}
@@ -33,7 +34,7 @@ export default function Banner() {
             priority
           />
         </div>
-        <div className="h-[20vh] md:h-[40vh] lg:h-[60vh]">
+        <div>
           <Image
             src="/Banner3.jpg"
             width={1400}
