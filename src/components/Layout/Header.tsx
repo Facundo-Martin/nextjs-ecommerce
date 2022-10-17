@@ -1,5 +1,5 @@
 import Image from "next/image";
-import React from "react";
+import { MagnifyingGlassIcon } from "@heroicons/react/24/outline";
 
 export default function Header() {
   return (
@@ -13,6 +13,13 @@ export default function Header() {
             objectFit="contain"
             className="cursor-pointer"
           />
+        </div>
+        <div className="hidden sm:flex flex-grow cursor-pointer items-center h-10 rounded-md bg-yellow-400 hover:bg-yellow-500">
+          <input
+            className="flex-1 h-full rounded-l-md focus:outline-none px-4"
+            type="text"
+          />
+          <MagnifyingGlassIcon className="h-12 p-4" />
         </div>
       </div>
     </header>
