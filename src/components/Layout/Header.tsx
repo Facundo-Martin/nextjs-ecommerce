@@ -45,9 +45,9 @@ export default function Header() {
           </div>
         </nav>
       </div>
-      <div className="flex items-center gap-x-10 bg-[#232F3E] p-2 pl-4">
+      <div className="flex items-center gap-x-6 bg-[#232F3E] p-1 pl-4 text-xs font-medium text-white">
         <p className="link flex items-center gap-x-1">
-          <Bars3Icon className="w-6 text-gray-600" />
+          <Bars3Icon className="w-6 text-white" />
           All
         </p>
         <p className="link">Prime Video</p>
