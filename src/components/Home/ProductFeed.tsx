@@ -3,10 +3,11 @@ import { Product } from "../../interfaces";
 import ProductCard from "./ProductCard";
 
 export default function ProductFeed({ products }: { products: Product[] }) {
+  console.log("INTHEPRODUCTFEED", products);
   return (
     <section>
       {products.map((product) => (
-        <ProductCard key={product.title} product={product} />
+        <ProductCard key={product.id} product={product} />
       ))}
     </section>
   );

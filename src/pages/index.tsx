@@ -10,13 +10,12 @@ type HomeProps = {
 };
 
 const Home: NextPage<HomeProps> = ({ products }) => {
+  console.log("HOMEPAGEPRODUCTS", products);
   return (
     <>
       <Head>Ecommerce app</Head>
       <ClientOnly>
-        <Layout>
-          <RenderHomepage products={products} />
-        </Layout>
+        <Layout>{products && <RenderHomepage products={products} />}</Layout>
       </ClientOnly>
     </>
   );
