@@ -2,8 +2,12 @@ import type { NextPage, GetServerSideProps } from "next";
 import Head from "next/head";
 import RenderHomepage from "../components/Home/RenderHomepage";
 import Layout from "../components/Layout/Layout";
+import { Product } from "../interfaces";
 
-const Home: NextPage = ({ products }: { products: string[] }) => {
+type HomeProps = {
+  products: Product[];
+};
+const Home: NextPage<HomeProps> = ({ products }) => {
   return (
     <>
       <Head>Ecommerce app</Head>
