@@ -15,7 +15,13 @@ export default function ProductCard({ product }: { product: Product }) {
       <p className="ml-2 mb-2 text-right text-xs italic text-gray-400">
         {product.category}
       </p>
-      <Image src={product.image} height={200} width={200} objectFit="contain" />
+      <Image
+        src={product.image}
+        height={200}
+        width={200}
+        objectFit="contain"
+        alt={product.title}
+      />
       <h4 className="my-3 line-clamp-2">{product.title}</h4>
       <div className="flex items-center">
         {Array(productRating)

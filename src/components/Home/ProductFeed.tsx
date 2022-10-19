@@ -16,6 +16,7 @@ export default function ProductFeed({ products }: { products: Product[] }) {
           width={1500}
           height={300}
           objectFit="contain"
+          alt="Discover products from small & medium businesses"
         />
       </div>
       <div className="md:col-span-2">
