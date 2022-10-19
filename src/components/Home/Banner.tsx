@@ -6,7 +6,7 @@ import "react-responsive-carousel/lib/styles/carousel.min.css"; // requires a lo
 export default function Banner() {
   return (
     <section className="relative mx-auto max-w-screen-xl">
-      <div className="absolute bottom-0 z-20 h-40 w-full bg-gradient-to-t from-gray-100 to-transparent"></div>
+      <span className="absolute bottom-0 z-20 h-40 w-full bg-gradient-to-t from-gray-100 to-transparent"></span>
       <Carousel
         infiniteLoop
         showStatus={false}
