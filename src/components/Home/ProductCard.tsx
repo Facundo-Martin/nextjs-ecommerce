@@ -11,12 +11,12 @@ export default function ProductCard({ product }: { product: Product }) {
   );
   const hasPrime = Math.random() < 0.5;
   return (
-    <div className="z-30 m-5 flex flex-col bg-white p-10">
+    <div className="z-30 m-5 flex flex-col bg-white py-4 px-5">
       <p className="ml-2 mb-2 text-right text-xs italic text-gray-400">
         {product.category}
       </p>
       <Image src={product.image} height={200} width={200} objectFit="contain" />
-      <h4 className="my-3">{product.title}</h4>
+      <h4 className="my-3 line-clamp-2">{product.title}</h4>
       <div className="flex items-center">
         {Array(productRating)
           .fill(1)
@@ -26,7 +26,7 @@ export default function ProductCard({ product }: { product: Product }) {
       </div>
 
       <p className="my-2 text-xs line-clamp-2">{product.description}</p>
-      <div className="">{product.price}</div>
+      <div className="">${product.price}</div>
       {hasPrime && (
         <div className="flex items-center space-x-2">
           <Image
@@ -36,10 +36,10 @@ export default function ProductCard({ product }: { product: Product }) {
             height={70}
             objectFit="contain"
           />
-          <p className="font- text-sm text-gray-500">Free next-day delivery</p>
+          <p className="font- text-sm text-gray-500">Free delivery today</p>
         </div>
       )}
-      <button className="button mt-auto">Add to basket</button>
+      <button className="button mt-4 md:mt-auto">Add to Cart</button>
     </div>
   );
 }
