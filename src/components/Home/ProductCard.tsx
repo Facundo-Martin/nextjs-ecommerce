@@ -10,13 +10,13 @@ export default function ProductCard({ product }: { product: Product }) {
     Math.random() * (maxRating - minRating + 1) + minRating
   );
   const hasPrime = Math.random() < 0.5;
-
-  console.log("IN THE PRODUCT CARD", product.image);
   return (
-    <div className="p-4">
-      <p>{product.category}</p>
+    <div className="z-30 m-5 flex flex-col bg-white p-10">
+      <p className="ml-2 text-right text-xs italic text-gray-400">
+        {product.category}
+      </p>
       <Image src={product.image} height={200} width={200} objectFit="contain" />
-      <h4>{product.title}</h4>
+      <h4 className="my-3">{product.title}</h4>
       <div className="flex items-center">
         {Array(productRating)
           .fill(1)
@@ -25,21 +25,21 @@ export default function ProductCard({ product }: { product: Product }) {
           ))}
       </div>
 
-      <p>{product.description}</p>
-      <div>{product.price}</div>
+      <p className="my-2 text-xs line-clamp-2">{product.description}</p>
+      <div className="">{product.price}</div>
       {hasPrime && (
-        <>
+        <div className="flex items-center space-x-2">
           <Image
             src="https://links.papareact.com/fdw"
             alt="Prime"
-            width={40}
-            height={40}
+            width={70}
+            height={70}
             objectFit="contain"
           />
-          <p>Free next-day delivery</p>
-        </>
+          <p className="font- text-sm text-gray-500">Free next-day delivery</p>
+        </div>
       )}
-      <button>Add to basket</button>
+      <button className="button mt-auto">Add to basket</button>
     </div>
   );
 }
