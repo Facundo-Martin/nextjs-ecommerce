@@ -7,6 +7,7 @@ import { Product } from "../interfaces";
 type HomeProps = {
   products: Product[];
 };
+
 const Home: NextPage<HomeProps> = ({ products }) => {
   return (
     <>
