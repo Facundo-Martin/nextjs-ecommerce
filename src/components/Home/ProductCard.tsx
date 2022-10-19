@@ -12,7 +12,7 @@ export default function ProductCard({ product }: { product: Product }) {
   const hasPrime = Math.random() < 0.5;
   return (
     <div className="z-30 m-5 flex flex-col bg-white p-10">
-      <p className="ml-2 text-right text-xs italic text-gray-400">
+      <p className="ml-2 mb-2 text-right text-xs italic text-gray-400">
         {product.category}
       </p>
       <Image src={product.image} height={200} width={200} objectFit="contain" />
