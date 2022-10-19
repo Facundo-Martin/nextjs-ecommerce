@@ -6,6 +6,9 @@
   .link {
     @apply cursor-pointer hover:underline;
   }
+  .button {
+    @apply rounded-full border border-yellow-400 bg-gradient-to-b from-yellow-300 to-yellow-400 p-2 text-xs focus:outline-none  active:to-yellow-500 md:text-sm;
+  }
 }
 
 html,

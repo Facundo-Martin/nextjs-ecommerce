@@ -16,6 +16,7 @@ export default function Header() {
             height={40}
             objectFit="contain"
             className="cursor-pointer"
+            alt="Amazon logo"
           />
         </div>
         <div className="hidden h-10 flex-grow cursor-pointer items-center rounded-md bg-yellow-400 hover:bg-yellow-500 sm:flex">
@@ -52,7 +53,7 @@ export default function Header() {
         </p>
         <p className="link">Prime Video</p>
         <p className="link">Amazon Business</p>
-        <p className="link">Today's Deals</p>
+        <p className="link">Today&apos;s Deals</p>
         <p className="link hidden lg:inline-flex">Electronics</p>
         <p className="link hidden lg:inline-flex">Food & Groceries</p>
         <p className="link hidden lg:inline-flex">Prime</p>
