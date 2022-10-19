@@ -1,5 +1,6 @@
 import type { NextPage, GetServerSideProps } from "next";
 import Head from "next/head";
+import ClientOnly from "../components/ClientOnly";
 import RenderHomepage from "../components/Home/RenderHomepage";
 import Layout from "../components/Layout/Layout";
 import { Product } from "../interfaces";
@@ -12,9 +13,11 @@ const Home: NextPage<HomeProps> = ({ products }) => {
   return (
     <>
       <Head>Ecommerce app</Head>
-      <Layout>
-        <RenderHomepage products={products} />
-      </Layout>
+      <ClientOnly>
+        <Layout>
+          <RenderHomepage products={products} />
+        </Layout>
+      </ClientOnly>
     </>
   );
 };

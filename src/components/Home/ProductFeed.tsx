@@ -6,7 +6,7 @@ export default function ProductFeed({ products }: { products: Product[] }) {
   return (
     <section>
       {products.map((product) => (
-        <ProductCard key={product.id} product={product} />
+        <ProductCard key={product.title} product={product} />
       ))}
     </section>
   );

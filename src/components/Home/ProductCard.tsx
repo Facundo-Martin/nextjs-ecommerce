@@ -17,6 +17,8 @@ export default function ProductCard({
     Math.random() * (maxRating - minRating + 1) + minRating
   );
   const hasPrime = Math.random() < 0.5;
+
+  console.log(image);
   return (
     <div className="p-4">
       <p>Category</p>
